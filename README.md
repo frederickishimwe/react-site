@@ -23,47 +23,51 @@ Then I changed to the newly created directory and run the following command to s
 ## 04
 The next step was to convert the local react project to a git repository.
 ### ` 
-#create a new git repository
-$ git init
-#add all changed file paths to staged changes
-$ git add .
-#commit all staged changes
-$ git commit -m 'initial commit `
+    #create a new git repository
+    $ git init
+    #add all changed file paths to staged changes
+    $ git add .
+    #commit all staged changes
+    $ git commit -m 'initial commit 
+`
 
 ## 05
 After that I added the just created GitHub repository as the remote repository and pushed the code to it using the following commands. It created a default master branch and added all the code to it.
 ### `
-#add remote repository
-$ git remote add origin https://github.com/gurjotmakkar/website.git
-#pushed local repository to remote repository on GitHub
-$ git push origin master`
+    #add remote repository
+    $ git remote add origin https://github.com/gurjotmakkar/website.git
+    #pushed local repository to remote repository on GitHub
+    $ git push origin master
+`
 
 ## 06
 The next step was to install ‘gh-pages’ package using the following npm command:
 ### `
-#install gh-pages package
-$ npm install --save gh-pages`
+    #install gh-pages package
+    $ npm install --save gh-pages
+`
 
 ## 07
 Now I just needed to modified the package.json file of the project by adding the following statements
 
 ### `
-add json object "homepage":'your git hub pages link'
-add two more json objects under the scripts object, predeploy and deploy
-"predeploy":"npm run build"
-"deploy":"gh-pages -d build"
+    add json object "homepage":'your git hub pages link'
+    add two more json objects under the scripts object, predeploy and deploy
+    "predeploy":"npm run build"
+    "deploy":"gh-pages -d build"
 
-The “homepage” specifies the host path where you want to host the application. 
-The template for the URL is: 
-https://[your-user-name].github.io/[your-repo-name]/
-“predeploy” specifies the command to build before deployment.
-“deploy” specifies which branch and directory to deploy.`
+    The “homepage” specifies the host path where you want to host the application. 
+    The template for the URL is: 
+    https://[your-user-name].github.io/[your-repo-name]/
+    “predeploy” specifies the command to build before deployment.
+    “deploy” specifies which branch and directory to deploy.
+`
 ## 08
 The last step now was to deploy the application using the following command:
-### 
-`
+### `
 #deploy application
-$ npm run deploy`
+$ npm run deploy
+`
 
 ## This basically keeps your code on master, and the build files on gh-pages, make sure your github is hosting from gh-pages branch,
 
