@@ -22,7 +22,8 @@ Then I changed to the newly created directory and run the following command to s
  `
 ## 04
 The next step was to convert the local react project to a git repository.
-### ` #create a new git repository
+### ` 
+#create a new git repository
 $ git init
 #add all changed file paths to staged changes
 $ git add .
@@ -31,20 +32,22 @@ $ git commit -m 'initial commit `
 
 ## 05
 After that I added the just created GitHub repository as the remote repository and pushed the code to it using the following commands. It created a default master branch and added all the code to it.
-### `#add remote repository
+### `
+#add remote repository
 $ git remote add origin https://github.com/gurjotmakkar/website.git
 #pushed local repository to remote repository on GitHub
 $ git push origin master`
 
 ## 06
 The next step was to install ‘gh-pages’ package using the following npm command:
-### `#install gh-pages package
+### `
+#install gh-pages package
 $ npm install --save gh-pages`
 
 ## 07
 Now I just needed to modified the package.json file of the project by adding the following statements
 
-###`
+### `
 add json object "homepage":'your git hub pages link'
 add two more json objects under the scripts object, predeploy and deploy
 "predeploy":"npm run build"
